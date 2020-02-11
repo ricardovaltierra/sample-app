@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   
   # create  C
   def new
-    debugger
+    @user = User.new    
   end
 
   # read    R
