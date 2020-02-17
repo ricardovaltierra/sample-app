@@ -22,6 +22,10 @@ class UsersController < ApplicationController
   end
   
   # update  U
+  def edit
+    @user = User.find(params[:id])
+  end
+  
   # delete  D
 
 
