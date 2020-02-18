@@ -19,8 +19,8 @@ class UsersController < ApplicationController
   end
 
   # read    R
-  def index
-    @users = User.all
+  def index    
+    @users = User.paginate(page: params[:page])
   end
 
   def show
