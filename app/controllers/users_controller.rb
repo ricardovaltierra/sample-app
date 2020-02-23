@@ -31,10 +31,11 @@ class UsersController < ApplicationController
   
   # update  U
   def edit
-    #@user = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def update
+    @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       redirect_to @user
@@ -48,14 +49,6 @@ class UsersController < ApplicationController
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"
     redirect_to users_url
-  end
-
-  # private methods
-  private
-
-  def user_params
-    params.require(:user).permit(:name, :email, :password,
-                                 :password_confirmation)
   end
 
   # Before filters
@@ -78,5 +71,13 @@ class UsersController < ApplicationController
   # Confirms an admin user.
   def admin_user
     redirect_to(root_url) unless current_user.admin?
+  end
+
+  # private methods
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :email, :password,
+                                 :password_confirmation)
   end
 end
