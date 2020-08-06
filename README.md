@@ -29,7 +29,7 @@
 
 ## About The Project
 
-This is a reference implementation of the sample application from [*Ruby on Rails Tutorial:
+This is a derivated implementation of the sample application from [*Ruby on Rails Tutorial:
 Learn Web Development with Rails*](https://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
 
@@ -37,9 +37,9 @@ The content covered remarks topics like static pages, controllers, models, layou
 
 ## Preview
 
-<img src="./app/assets/images/usage1.gif" alt="Create and edit a user" width="360" /> <img src="./app/assets/images/usage2.gif" alt="Create and edit a micropost" width="360" align="right" />
+<img src="./app/assets/images/usage1.gif" alt="Create and edit a user" width="260" /> <img src="./app/assets/images/usage2.gif" alt="Create and edit a micropost" width="260" align="right" />
 
-> [Live](https://small-toy-app.herokuapp.com/)
+> [Live](https://mv-sample-app.herokuapp.com/)
 
 Feel free to use and recommend it.
 
@@ -49,14 +49,17 @@ Feel free to use and recommend it.
 
 * [Rails 5.1.6](https://rubygems.org/gems/rails/versions/5.1.6)
 
-* [SCSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Boootstrap/SCSS](https://github.com/twbs/bootstrap-rubygem)
 
 * [SQLite 1.3.13](https://rubygems.org/gems/sqlite3/versions/1.3.13)
 
 * gems:
-    * [puma](https://rubygems.org/gems/puma)
-    * [spring](https://rubygems.org/gems/spring)
-    * [pg (production)](https://rubygems.org/gems/pg)
+    * [puma 3.9.1](https://rubygems.org/gems/puma)
+    * [spring 2.0.2](https://rubygems.org/gems/spring)
+    * [mini_magick 4.7.0](https://github.com/minimagick/minimagick)
+    * [fog 1.40.0](https://rubygems.org/gems/fog/versions/1.38.0)
+    * [carrierwave 1.1.0](https://rubygems.org/gems/carrierwave)
+    * [bcrypt 3.1.11](https://rubygems.org/gems/bcrypt)
 
 ## Getting Started
 
@@ -66,7 +69,23 @@ Clone or fork the <a href="https://github.com/ricardovaltierra/sample-app">repo<
 
 ## How it Works
 
-This app is built on Rails Scaffolding basis, it needs Sqlite3 to proper use on development and Postgre for production. All good stuff is on `/app` folder.
+This whole app is intended to cover the most of the functionalities of Rails without using Scaffolding. All of the content is generated from scratch and with a TDD aprooach. It take advantages on layout design using Bootstrap and SASS resources  aside to including test suite for integration.
+
+Validations made on models for presence, length and format aside of using of `has_secure password` method. 
+
+Debug information visible on this app on real time in layout and user of Gravatars for default user images. Use of SSL to use `https` and propper integration of Cookies and Session variables for handling html elements and backend communication actively.
+
+Tokens and Rmemeber Digest for handling data persistence.
+
+Authorization implemented via `before filters` to handle user hierarchy and 'Friendly forwarding' to redirect.
+
+DB poopulation takng advantage of `seed.rb` side to fixtures created on testing eviroment.
+
+Partials for every page section and user. Use of Action Mailer to create mails and views for new users with account activations - and password reset - via generated tokens.
+
+Use of SendGrid (Heroku) as a mail service.
+
+Uploading images via CarrierWave using aws services. Register and create a micropost !
 
 ### Running the code
 
@@ -119,47 +138,3 @@ Ricardo Valtierra - [@RicardoValtie15](https://twitter.com/RicardoValtie15) - ri
 ## MIT License
 
 This project is under the [MIT](LICENSE) license.
-
-
-
-# Ruby on Rails Tutorial sample application
-
-This is the sample application for
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails*](https://www.railstutorial.org/)
-by [Michael Hartl](http://www.michaelhartl.com/).
-
-## License
-
-All source code in the [Ruby on Rails Tutorial](https://www.railstutorial.org/)
-is available jointly under the MIT License and the Beerware License. See
-[LICENSE.md](LICENSE.md) for details.
-
-## Getting started
-
-To get started with the app, clone the repo and then install the needed gems:
-
-```
-$ bundle install --without production
-```
-
-Next, migrate the database:
-
-```
-$ rails db:migrate
-```
-
-Finally, run the test suite to verify that everything is working correctly:
-
-```
-$ rails test
-```
-
-If the test suite passes, you'll be ready to run the app in a local server:
-
-```
-$ rails server
-```
-
-For more information, see the
-[*Ruby on Rails Tutorial* book](https://www.railstutorial.org/book).
