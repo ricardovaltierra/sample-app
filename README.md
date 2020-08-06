@@ -33,7 +33,7 @@ This is a derivated implementation of the sample application from [*Ruby on Rail
 Learn Web Development with Rails*](https://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
 
-The content covered remarks topics like static pages, controllers, models, layouts, partials, mailing, login with cipher-token, password reset, entity relationships and image uploading.
+The content covered remarks topics like static pages, controllers, models, layouts, partials, mailing, login with cipher-token, password reset, entity relationships and multimedia handling.
 
 ## Preview
 
@@ -73,19 +73,19 @@ This whole app is intended to cover the most of the functionalities of Rails wit
 
 Validations made on models for presence, length and format aside of using of `has_secure password` method. 
 
-Debug information visible on this app on real time in layout and user of Gravatars for default user images. Use of SSL to use `https` and propper integration of Cookies and Session variables for handling html elements and backend communication actively.
+Debug information visible on this app on real time in layouts and use of Gravatars for default user images. Use of SSL to use `https` and propper integration of Cookies and Session variables for handling html elements and backend communication actively.
 
-Tokens and Rmemeber Digest for handling data persistence.
+Tokens and Remember Digest for handling data persistence.
 
 Authorization implemented via `before filters` to handle user hierarchy and 'Friendly forwarding' to redirect.
 
-DB poopulation takng advantage of `seed.rb` side to fixtures created on testing eviroment.
+DB population taking advantage of `seed.rb` aside to fixtures created on testing eviroment.
 
 Partials for every page section and user. Use of Action Mailer to create mails and views for new users with account activations - and password reset - via generated tokens.
 
 Use of SendGrid (Heroku) as a mail service.
 
-Uploading images via CarrierWave using aws services. Register and create a micropost !
+Uploading images via CarrierWave using AWS services. Register and create a micropost !
 
 ### Running the code
 
