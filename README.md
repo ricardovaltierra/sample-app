@@ -33,7 +33,7 @@ This is a derivated implementation of the sample application from [*Ruby on Rail
 Learn Web Development with Rails*](https://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
 
-The content covered remarks topics like static pages, controllers, models, layouts, partials, mailing, login with cipher-token, password reset, entity relationships and multimedia handling.
+The content covered remarks topics like static pages, controllers, models, layouts, partials, mailing, login with cipher-token, password reset, entity relationships, and multimedia handling.
 
 ## Preview
 
@@ -69,17 +69,17 @@ Clone or fork the <a href="https://github.com/ricardovaltierra/sample-app">repo<
 
 ## How it Works
 
-This whole app is intended to cover the most of the functionalities of Rails without using Scaffolding. All of the content is generated from scratch and with a TDD aprooach. It take advantages on layout design using Bootstrap and SASS resources  aside to including test suite for integration.
+This whole app is intended to cover most of the functionalities of Rails without using Scaffolding. All of the content is generated from scratch and with a TDD approach. It takes advantage on layout design using Bootstrap and SASS resources aside to including a test suite for integration.
 
-Validations made on models for presence, length and format aside of using of `has_secure password` method. 
+Validations made on models for presence, length, and format aside of using of `has_secure password` method.
 
-Debug information visible on this app on real time in layouts and use of Gravatars for default user images. Use of SSL to use `https` and propper integration of Cookies and Session variables for handling html elements and backend communication actively.
+Debug information visible on this app on real-time in layouts and use of Gravatars for default user images. Use of SSL to use `https` and propper integration of Cookies and Session variables for handling HTML elements and backend communication actively.
 
 Tokens and Remember Digest for handling data persistence.
 
 Authorization implemented via `before filters` to handle user hierarchy and 'Friendly forwarding' to redirect.
 
-DB population taking advantage of `seed.rb` aside to fixtures created on testing eviroment.
+DB population taking advantage of `seed.rb` aside to fixtures created on testing environment.
 
 Partials for every page section and user. Use of Action Mailer to create mails and views for new users with account activations - and password reset - via generated tokens.
 
@@ -90,7 +90,7 @@ Uploading images via CarrierWave using AWS services. Register and create a micro
 ### Running the code
 
 
-To get started with the app, clone the repo and then install the needed gems:
+To get started with the app, clone the repo, and then install the needed gems:
 
 ```
 $ bundle install --without production
@@ -119,7 +119,7 @@ For more information, see the
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what makes the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project.
 
